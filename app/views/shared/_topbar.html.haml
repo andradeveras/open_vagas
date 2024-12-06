@@ -8,8 +8,12 @@
         %li.nav-item
           %a.nav-link.active{"aria-current" => "page", href: root_path } Inicio
         %li.nav-item
-          %a.nav-link{href: "#"} Login/Cadastro 
-        %li.nav-item.dropdown
-          %a.dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", href: "#"} Settings
-          %ul.dropdown-menu
-            = button_to('Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', data: { turbo: false })
+          %a.nav-link.active{"aria-current" => "page", href: root_path } Minha Empresa
+        - unless user_signed_in? 
+          %li.nav-item
+            = link_to('Login/Cadastro', new_user_session_path, class: 'nav-link')
+        - if user_signed_in?
+          %li.nav-item.dropdown
+            %a.dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", href: "#"} Settings
+            %ul.dropdown-menu
+              = button_to('Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', data: { turbo: false })
