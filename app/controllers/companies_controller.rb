@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @company = current_user.build_company # Create a new company with associated user
+    @company = current_user.build_company # Create a new company with associated user, but not yet saved. 
   end
 
   def edit
