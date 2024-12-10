@@ -8,11 +8,20 @@ import "bootstrap"
 // Funcão para abrir e fechar o menu lateral em dispositivos mobile e desktop
 // O primeiro querySelector é para selecionar o botão e o segundo para abrir ou fechar o menu
 (() => {
-  'use strict'
+  'use strict';
 
-  document.querySelector('#navbarSideCollapse').addEventListener('click', () => { 
-  document.querySelector('.offcanvas-collapse').classList.toggle('open')
-  })
-})()
+  const initializeNavbar = () => {
+    const navbarToggle = document.querySelector('#navbarSideCollapse');
+    const offcanvasMenu = document.querySelector('.offcanvas-collapse');
+
+    if (navbarToggle && offcanvasMenu) {
+      navbarToggle.addEventListener('click', () => {
+        offcanvasMenu.classList.toggle('open');
+      });
+    }
+  };
+
+  document.addEventListener('turbo:load', initializeNavbar);
+})();
 
 
