@@ -17,3 +17,5 @@
             %a.dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", href: "#"} Settings
             %ul.dropdown-menu
               = button_to('Sair', destroy_user_session_path, method: :delete, class: 'dropdown-item', data: { turbo: false })
+        %li.nav-item
+          %a.nav-link.puclic_position{"aria-current" => "page", href: new_position_path } Publicar vaga 

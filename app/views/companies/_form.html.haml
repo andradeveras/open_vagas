@@ -8,4 +8,4 @@
     .image-preview
       = image_tag(@company.logo, alt: 'Logo atual')
 
-  = f.button :submit, class: 'btn btn-primary btn-block'
+  = f.button :submit, class: 'btn btn-primary btn-block', data: { turbo: false }

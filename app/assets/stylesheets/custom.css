@@ -102,3 +102,13 @@ footer a:hover {
   color: #1abc9c; /* Cor ao passar o mouse */
   text-decoration: underline; /* Adiciona sublinhado ao passar */
 }
+
+.puclic_position{
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.public_position:hover{
+  background-color: #f5f7fb;
+  color: #000 !important;
+}
