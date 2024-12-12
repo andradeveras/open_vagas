@@ -5,5 +5,7 @@ class Position < ApplicationRecord
                 :product_management, :other, :tecnology]
   enum contract: [:clt, :pg , :match]
 
-  validates :name, :career, :contract, :city, :state, :summary, :description, presence: true
+  has_rich_text :description # Action Text para textos longos
+
+  validates :name, :career, :contract, :city, :state, :summary, presence: true
 end
