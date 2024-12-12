@@ -9,6 +9,8 @@
           %a.nav-link.active{"aria-current" => "page", href: root_path } Inicio
         %li.nav-item
           %a.nav-link.active{"aria-current" => "page", href: dynamic_url_company } Minha Empresa
+        %li.nav-item
+          %a.nav-link.active{"aria-current" => "page", href: positions_path } Minhas Vagas
         - unless user_signed_in? 
           %li.nav-item
             = link_to('Login/Cadastro', new_user_session_path, class: 'nav-link')

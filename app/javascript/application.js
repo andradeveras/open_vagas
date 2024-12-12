@@ -32,6 +32,7 @@ import "jquery";
 
 
 
+
 // Funcionalidade do contador de caracteres no formulário
 document.addEventListener('turbo:load', function() {
   // Cache os elementos

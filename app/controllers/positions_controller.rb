@@ -1,5 +1,6 @@
 class PositionsController < ApplicationController
   before_action :set_company, :set_i18n_careers, :set_i18n_contracts
+  before_action :set_posotion, only: [:show, :edit, :update]
   def index
     @positions = @company.positions 
   end

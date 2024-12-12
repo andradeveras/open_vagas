@@ -112,3 +112,29 @@ footer a:hover {
   background-color: #f5f7fb;
   color: #000 !important;
 }
+
+.card-position{ 
+  border: none !important;
+}
+
+.card-position .card-body{
+  padding: 0 !important;
+}
+
+.group-social-network img{
+  margin: 0px 2px;
+  width: 30px;
+  height: 30px;
+}
+
+.group-social-network{
+  text-align: right;
+}
+
+.share-copy-icon{
+  background-color: #72869c;
+  color: #fff;
+  border-color: #72869c;
+  border-radius: 3px;
+  padding: 5px;
+}
